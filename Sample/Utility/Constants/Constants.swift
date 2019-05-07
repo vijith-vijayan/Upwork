@@ -12,8 +12,15 @@ import Alamofire
 protocol EndpointType {
     
     var baseURL: String { get }
-    
     var path: String { get }
+    
+}
+
+protocol RequestData {
+    
+    var parameters: Parameters { get }
+    var header: HTTPHeaders { get }
+    
     
 }
 
@@ -26,5 +33,18 @@ extension Webservice: EndpointType {
     var baseURL: String {
         return "https://api.lykapp.com/lykjwt/index.php?/LYKUser/"
     }
+    
+}
+
+extension Webservice: RequestData {
+    
+    var parameters: Parameters {
+        return [:]
+    }
+    
+    var header: HTTPHeaders {
+        return ["token":" "]
+    }
+    
     
 }

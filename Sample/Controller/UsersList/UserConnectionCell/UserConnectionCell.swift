@@ -10,7 +10,7 @@ import UIKit
 
 class UserConnectionCell: UITableViewCell {
 
-    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var userImageView: AyncImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var connectionsLabel: UILabel!
     @IBOutlet weak var userActionButtons: UIButton!
@@ -26,4 +26,11 @@ class UserConnectionCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configureCell(relation: Relations) {
+        
+        nameLabel.text = relation.firstName
+        connectionsLabel.text = "\(relation.mutalConnections)"
+        userImageView.loadAsyncFrom(url: relation.imageUrl, placeholder: UIImage(named: "user"))
+    }
+    
 }

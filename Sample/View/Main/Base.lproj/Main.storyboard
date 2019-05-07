@@ -13,7 +13,7 @@
         <!--User ConnectionsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="UserConnectionsVC" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userConnection" id="BYZ-38-t0r" customClass="UserConnectionsVC" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ie6-DE-qdw"/>
                     <connections>
+                        <outlet property="containerView" destination="gea-Gu-xn6" id="4jm-An-20x"/>
                         <outlet property="searchTextField" destination="tK6-XP-dcf" id="A2r-Lp-pT5"/>
                         <outlet property="segmentControl" destination="5Wg-cd-W5e" id="mMU-dS-Y28"/>
                         <segue destination="bvr-HH-koN" kind="show" id="V0k-WM-0SF"/>
@@ -92,7 +93,7 @@
         <!--User List View Controller-->
         <scene sceneID="4lV-pg-yV5">
             <objects>
-                <viewController id="bvr-HH-koN" customClass="UserListViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserList" id="bvr-HH-koN" customClass="UserListViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rBZ-7J-v0S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="lqQ-sA-bDW" customClass="UserConnectionCell" customModule="Sample" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userConnectionCell" rowHeight="100" id="lqQ-sA-bDW" customClass="UserConnectionCell" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lqQ-sA-bDW" id="DMW-vI-4Eg">
@@ -111,7 +112,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZC-wA-7z2">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x5G-1w-VZM">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x5G-1w-VZM" customClass="AyncImageView" customModule="Sample" customModuleProvider="target">
                                                             <rect key="frame" x="15" y="15" width="70" height="70"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="mjO-0S-QkF"/>

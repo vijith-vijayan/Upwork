@@ -17,7 +17,6 @@
 		0B513512227D9748006360D7 /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B513511227D9748006360D7 /* SampleUITests.swift */; };
 		0B513534227D9AC2006360D7 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B513533227D9AC2006360D7 /* BaseVC.swift */; };
 		0B513538227D9BCF006360D7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B513537227D9BCF006360D7 /* UIColor+Extension.swift */; };
-		0B830823228113C300801F55 /* RelationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B830822228113C300801F55 /* RelationViewModel.swift */; };
 		0B9022EA22808A4B0036EF9B /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9022E922808A4B0036EF9B /* AsyncImageView.swift */; };
 		0B9022EE228094D60036EF9B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9022ED228094D60036EF9B /* WebService.swift */; };
 		0B9022F122809ED50036EF9B /* DataRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9022F022809ED50036EF9B /* DataRequest+Extension.swift */; };
@@ -28,6 +27,8 @@
 		0BAC955F227F1DB100FA849D /* UserConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC955E227F1DB100FA849D /* UserConnectionCell.swift */; };
 		0BAC9562227F1FCD00FA849D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC9561227F1FCD00FA849D /* UserListViewController.swift */; };
 		53719A5B022106D91E8A0E84 /* Pods_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FA46880A42714B4EA5C04D /* Pods_Sample.framework */; };
+		672116EA228164F500707346 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672116E9228164F500707346 /* TableView+Extension.swift */; };
+		672116ED2281692000707346 /* Embedder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672116EC2281692000707346 /* Embedder.swift */; };
 		8223EAFD2EBD7A5E57510D90 /* Pods_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F06FA9323085460E9FC17EA /* Pods_SampleTests.framework */; };
 		CFDED0A4FE2CB04B1C7CA86E /* Pods_SampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B997E4806CD42038DC7FB70 /* Pods_SampleUITests.framework */; };
 /* End PBXBuildFile section */
@@ -68,7 +69,6 @@
 		0B513513227D9748006360D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B513533227D9AC2006360D7 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0B513537227D9BCF006360D7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		0B830822228113C300801F55 /* RelationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationViewModel.swift; sourceTree = "<group>"; };
 		0B9022E922808A4B0036EF9B /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		0B9022ED228094D60036EF9B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		0B9022F022809ED50036EF9B /* DataRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extension.swift"; sourceTree = "<group>"; };
@@ -82,6 +82,8 @@
 		2D3AA098343DD04FF12F0BEE /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.release.xcconfig"; path = "Target Support Files/Pods-Sample/Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		3B997E4806CD42038DC7FB70 /* Pods_SampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6250FA100A2E075F0CBF464B /* Pods-SampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleUITests.release.xcconfig"; path = "Target Support Files/Pods-SampleUITests/Pods-SampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		672116E9228164F500707346 /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
+		672116EC2281692000707346 /* Embedder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Embedder.swift; sourceTree = "<group>"; };
 		7F06FA9323085460E9FC17EA /* Pods_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8771D56C968424CA777FBF /* Pods-SampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-SampleUITests/Pods-SampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C728D3FD2614D7696FD1B895 /* Pods-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.debug.xcconfig"; path = "Target Support Files/Pods-Sample/Pods-Sample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +148,6 @@
 				0B513526227D979B006360D7 /* Controller */,
 				0B513523227D976E006360D7 /* Application */,
 				0B513522227D9768006360D7 /* Resources */,
-				0B513521227D9760006360D7 /* ViewModel */,
 				0B513520227D9759006360D7 /* View */,
 				0B51351F227D9750006360D7 /* Model */,
 				0B5134FD227D9748006360D7 /* Info.plist */,
@@ -187,14 +188,6 @@
 				0B513524227D977C006360D7 /* Main */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		0B513521227D9760006360D7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0B830822228113C300801F55 /* RelationViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0B513522227D9768006360D7 /* Resources */ = {
@@ -252,6 +245,7 @@
 		0B513528227D98CE006360D7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				672116EB2281690B00707346 /* View */,
 				0B9022E822808A330036EF9B /* ImageView */,
 				0B513529227D98D5006360D7 /* SegmentControl */,
 			);
@@ -269,7 +263,6 @@
 		0B513530227D9A90006360D7 /* UserConnections */ = {
 			isa = PBXGroup;
 			children = (
-				0BAC955D227F1D8D00FA849D /* UserConnectionCell */,
 				0B5134F0227D9746006360D7 /* UserConnectionsVC.swift */,
 			);
 			path = UserConnections;
@@ -286,6 +279,7 @@
 		0B513535227D9BB5006360D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				672116E8228164DC00707346 /* TableView */,
 				0B9022EF22809EB30036EF9B /* DataRequest */,
 				0BA18869227EDC7B007A8E14 /* UITextField */,
 				0BA18868227EDC74007A8E14 /* UIColor */,
@@ -360,6 +354,7 @@
 		0BAC9560227F1FB400FA849D /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
+				0BAC955D227F1D8D00FA849D /* UserConnectionCell */,
 				0BAC9561227F1FCD00FA849D /* UserListViewController.swift */,
 			);
 			path = UsersList;
@@ -386,6 +381,22 @@
 				6250FA100A2E075F0CBF464B /* Pods-SampleUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		672116E8228164DC00707346 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				672116E9228164F500707346 /* TableView+Extension.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		672116EB2281690B00707346 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				672116EC2281692000707346 /* Embedder.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -617,10 +628,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BA18864227ECD42007A8E14 /* TTSegmentedControl.swift in Sources */,
+				672116ED2281692000707346 /* Embedder.swift in Sources */,
+				672116EA228164F500707346 /* TableView+Extension.swift in Sources */,
 				0B5134F7227D9746006360D7 /* Sample.xcdatamodeld in Sources */,
 				0BAC955F227F1DB100FA849D /* UserConnectionCell.swift in Sources */,
 				0B5134F1227D9746006360D7 /* UserConnectionsVC.swift in Sources */,
-				0B830823228113C300801F55 /* RelationViewModel.swift in Sources */,
 				0B5134EF227D9746006360D7 /* AppDelegate.swift in Sources */,
 				0BAC9562227F1FCD00FA849D /* UserListViewController.swift in Sources */,
 				0B9022EE228094D60036EF9B /* WebService.swift in Sources */,
@@ -806,7 +818,13 @@
 			baseConfigurationReference = C728D3FD2614D7696FD1B895 /* Pods-Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON\"",
+				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -814,6 +832,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Vijith.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -824,7 +843,8 @@
 			baseConfigurationReference = 2D3AA098343DD04FF12F0BEE /* Pods-Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -832,6 +852,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Vijith.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
