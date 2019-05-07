@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Alamofire
 
-struct Relations {
+struct Relations: Codable {
     
     var userId: String
     var firstName: String
@@ -21,5 +22,24 @@ struct Relations {
     var requestType: String
     var isFriend: Bool
     var mutalConnections: Int
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case userId = "userId"
+        case firstName = "firstName"
+        case email = "email"
+        case countryCode = "countryCode"
+        case phoneNumber = "phoneNumber"
+        case imageUrl = "imageUrl"
+        case relation = "relation"
+        case closeType = "closeType"
+        case requestType = "requestType"
+        case isFriend = "isFriend"
+        case mutalConnections = "mutalConnections"
+    }
+    
+}
+
+extension Relations {
     
 }
