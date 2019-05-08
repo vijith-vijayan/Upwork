@@ -20,13 +20,20 @@ struct Webservice {
     public func request(params: Parameters, header: HTTPHeaders,
                         completion: @escaping ([Relations]?, Error?) -> ()) {
         let url = "\(baseURL)\(path)"
-        Alamofire.request(url, method: .post, parameters: params,encoding: JSONEncoding.default, headers: header).responseRelation { (response) in
+        Alamofire.request(url, method: .post, parameters: params,encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
             if let error = response.error {
                 completion(nil, error)
                 return
             }
-            if let relation = response.result.value {
-                completion(relation, nil)
+            if let value = response.result.value {
+                let json = JSON(value)
+                let relations = json["relations"].arrayValue
+                var r = [Relations]()
+                for relation in relations {
+                    let object = Relations(relation: relation)
+                    r.append(object)
+                }
+                completion(r, nil)
                 return
             }
         }

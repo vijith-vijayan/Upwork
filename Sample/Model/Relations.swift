@@ -23,23 +23,19 @@ struct Relations: Codable {
     var isFriend: Bool
     var mutalConnections: Int
     
-    
-    enum CodingKeys: String, CodingKey {
-        case userId = "userId"
-        case firstName = "firstName"
-        case email = "email"
-        case countryCode = "countryCode"
-        case phoneNumber = "phoneNumber"
-        case imageUrl = "imageUrl"
-        case relation = "relation"
-        case closeType = "closeType"
-        case requestType = "requestType"
-        case isFriend = "isFriend"
-        case mutalConnections = "mutalConnections"
+    init(relation: responseJSON) {
+        
+        self.userId = relation["userId"].stringValue
+        self.firstName = relation["firstName"].stringValue
+        self.email = relation["email"].stringValue
+        self.countryCode = relation["countryCode"].stringValue
+        self.phoneNumber = relation["phoneNumber"].stringValue
+        self.imageUrl = relation["imageUrl"].stringValue
+        self.relation = relation["relarion"].stringValue
+        self.closeType = relation["closeType"].stringValue
+        self.requestType = relation["requestType"].stringValue
+        self.isFriend = relation["isFriend"].boolValue
+        self.mutalConnections = relation["mutalConnections"].intValue
+        
     }
-    
-}
-
-extension Relations {
-    
 }

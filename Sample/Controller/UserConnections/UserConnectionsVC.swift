@@ -21,6 +21,7 @@ class UserConnectionsVC: BaseVC {
         
         configureSegmentControl()
         configureTextfield()
+        self.showViewController(sID: "UserList")
     }
 
     private func configureSegmentControl() {
@@ -29,12 +30,7 @@ class UserConnectionsVC: BaseVC {
         segmentControl.useShadow = true
         segmentControl.didSelectItemWith = { (index, title) -> () in
             if index == 0 {
-                Embedder.embed(
-                    withIdentifier: "UserList", // Storyboard ID
-                    parent: self,
-                    container: self.containerView){ vc in
-                        // do things when embed complete
-                }
+                self.showViewController(sID: "UserList")
             }
         }
     }
@@ -44,6 +40,16 @@ class UserConnectionsVC: BaseVC {
             return
         }
         searchTextField.setLeftIcon(leftImage)
+    }
+    
+    private func showViewController(sID: String) {
+        
+        Embedder.embed(
+            withIdentifier: sID, // Storyboard ID
+            parent: self,
+            container: self.containerView){ vc in
+                // do things when embed complete
+        }
     }
 
 }

@@ -8,6 +8,18 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
+
+typealias responseJSON = JSON
+
+var count: Int = 1
+var page: Int {
+    get {
+        return 0
+    } set {
+        count = newValue
+    }
+}
 
 protocol EndpointType {
     
@@ -39,11 +51,13 @@ extension Webservice: EndpointType {
 extension Webservice: RequestData {
     
     var parameters: Parameters {
-        return [:]
+        return ["userId":"#XZ#$","relativeId":"#$ZK!%","start":count,"limit":25,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkX2F0IjoxNTU2ODc4Mjg4LCJ2YWxpZF9mb3IiOjg2NDAwfQ.zy0LQ7IbIvKoXWJ5HU7un95qCzK5FYZYuyKJ-gOA-1Q"]
     }
     
+    
+    
     var header: HTTPHeaders {
-        return ["token":" "]
+        return ["token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkX2F0IjoxNTU3MTI5NDEwLCJ2YWxpZF9mb3IiOjg2NDAwfQ.Km_JshF51YmaSRXieonaGsRMjJMZaMk6ndfcTsFC2tY-gtuuloncin-X$K!Y"]
     }
     
     

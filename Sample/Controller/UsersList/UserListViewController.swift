@@ -75,6 +75,14 @@ extension UserListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userConnectionCell", for: indexPath) as? UserConnectionCell else {
             fatalError("Cell does not exist in storyboard")
         }
+        if object.count > 1{
+            let lastElement = object.count - 1
+            if indexPath.row == lastElement {
+                //call get api for next page
+                page += 1
+                getDatas()
+            }
+        }
         let relation = object[indexPath.row]
         cell.configureCell(relation: relation)
         return cell
