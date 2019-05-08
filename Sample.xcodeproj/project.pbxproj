@@ -17,6 +17,7 @@
 		0B513512227D9748006360D7 /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B513511227D9748006360D7 /* SampleUITests.swift */; };
 		0B513534227D9AC2006360D7 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B513533227D9AC2006360D7 /* BaseVC.swift */; };
 		0B513538227D9BCF006360D7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B513537227D9BCF006360D7 /* UIColor+Extension.swift */; };
+		0B851F0B228301F700B71088 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B851F0A228301F700B71088 /* Spinner.swift */; };
 		0B9022EA22808A4B0036EF9B /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9022E922808A4B0036EF9B /* AsyncImageView.swift */; };
 		0B9022EE228094D60036EF9B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9022ED228094D60036EF9B /* WebService.swift */; };
 		0B9022F122809ED50036EF9B /* DataRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9022F022809ED50036EF9B /* DataRequest+Extension.swift */; };
@@ -69,6 +70,7 @@
 		0B513513227D9748006360D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B513533227D9AC2006360D7 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0B513537227D9BCF006360D7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		0B851F0A228301F700B71088 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		0B9022E922808A4B0036EF9B /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		0B9022ED228094D60036EF9B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		0B9022F022809ED50036EF9B /* DataRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extension.swift"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		0B513527227D98C4006360D7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				0B851F09228301DF00B71088 /* Loader */,
 				0B9022F22280A2530036EF9B /* Constants */,
 				0B513528227D98CE006360D7 /* Classes */,
 			);
@@ -285,6 +288,14 @@
 				0BA18868227EDC74007A8E14 /* UIColor */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0B851F09228301DF00B71088 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				0B851F0A228301F700B71088 /* Spinner.swift */,
+			);
+			path = Loader;
 			sourceTree = "<group>";
 		};
 		0B9022E822808A330036EF9B /* ImageView */ = {
@@ -643,6 +654,7 @@
 				0B9022F42280A2620036EF9B /* Constants.swift in Sources */,
 				0B513538227D9BCF006360D7 /* UIColor+Extension.swift in Sources */,
 				0B9022EA22808A4B0036EF9B /* AsyncImageView.swift in Sources */,
+				0B851F0B228301F700B71088 /* Spinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

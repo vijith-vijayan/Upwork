@@ -37,7 +37,7 @@ protocol RequestData {
 }
 
 extension Webservice: EndpointType {
-   
+    
     var path: String {
         return "getUserConnections"
     }
@@ -51,13 +51,13 @@ extension Webservice: EndpointType {
 extension Webservice: RequestData {
     
     var parameters: Parameters {
-        return ["userId":"#XZ#$","relativeId":"#$ZK!%","start":count,"limit":25,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkX2F0IjoxNTU2ODc4Mjg4LCJ2YWxpZF9mb3IiOjg2NDAwfQ.zy0LQ7IbIvKoXWJ5HU7un95qCzK5FYZYuyKJ-gOA-1Q"]
+        return ["token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkX2F0IjoxNTU3MzAxMzk4LCJ2YWxpZF9mb3IiOjg2NDAwfQ.lpImsd8--YqBNkaF97WpGVnLZGxQLqRh9Wrph0oMIBg","relativeId":"#M%Y!Y","userId":"X!Y$Z","limit":20,"start":0]
     }
     
     
     
     var header: HTTPHeaders {
-        return ["token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkX2F0IjoxNTU3MTI5NDEwLCJ2YWxpZF9mb3IiOjg2NDAwfQ.Km_JshF51YmaSRXieonaGsRMjJMZaMk6ndfcTsFC2tY-gtuuloncin-X$K!Y"]
+        return ["token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkX2F0IjoxNTU3MzAxMzk4LCJ2YWxpZF9mb3IiOjg2NDAwfQ.lpImsd8--YqBNkaF97WpGVnLZGxQLqRh9Wrph0oMIBg-gtsroncin-XZYKZ"]
     }
     
     

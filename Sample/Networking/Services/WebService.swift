@@ -27,7 +27,7 @@ struct Webservice {
             }
             if let value = response.result.value {
                 let json = JSON(value)
-                let relations = json["relations"].arrayValue
+                let relations = json["response"]["relations"].arrayValue
                 var r = [Relations]()
                 for relation in relations {
                     let object = Relations(relation: relation)

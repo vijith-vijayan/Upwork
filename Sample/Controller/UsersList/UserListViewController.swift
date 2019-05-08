@@ -44,8 +44,7 @@ class UserListViewController: BaseVC {
         
         webservice.request(params: webservice.parameters,
                            header: webservice.header) { (relations, error) in
-                            guard error != nil,
-                                let r = relations else {
+                            guard let r = relations else {
                                     print("Error")
                                     return
                             }
@@ -59,9 +58,9 @@ extension UserListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         if object.count == 0 {
-            tableView.emptyMessage(title: "You don't have any data",
-                                   message: "Please try later",
-                                   emptyImage: UIImage(named: "database.png")!)
+            tableView.emptyMessage(title: "Loading your data",
+                                   message: "Please wait a moment",
+                                   emptyImage: UIImage(named: "high-five.png")!)
         } else {
             tableView.restoreTableView()
         }

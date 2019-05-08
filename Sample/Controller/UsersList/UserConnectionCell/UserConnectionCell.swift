@@ -18,6 +18,9 @@ class UserConnectionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        userImageView.layer.cornerRadius = userImageView.frame.size.width/2
+        userImageView.layer.masksToBounds = true
+        userImageView.contentMode = .scaleAspectFill
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,7 +32,7 @@ class UserConnectionCell: UITableViewCell {
     func configureCell(relation: Relations) {
         
         nameLabel.text = relation.firstName
-        connectionsLabel.text = "\(relation.mutalConnections)"
+        connectionsLabel.text = "\(relation.mutalConnections) Mutual connections"
         userImageView.loadAsyncFrom(url: relation.imageUrl, placeholder: UIImage(named: "user"))
     }
     

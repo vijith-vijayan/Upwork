@@ -10,6 +10,7 @@ import UIKit
 
 class BaseVC: UIViewController {
     
+    let spinnerView = Spinner()
     
     /// Menu Button
     lazy var menuButton: UIButton = { [unowned self] in
@@ -36,6 +37,12 @@ class BaseVC: UIViewController {
 
         // Do any additional setup after loading the view.
         setNavigationBar()
+        // Customize the line width
+        spinnerView.circleLayer.lineWidth = 2.0
+        // Change the color of the line
+        spinnerView.circleLayer.strokeColor = UIColor.orange.cgColor
+        // Change the duration of the animation
+        spinnerView.animationDuration = 2.5
     }
     
     /// SetUp Navigation bar
@@ -45,6 +52,16 @@ class BaseVC: UIViewController {
         self.navigationItem.leftBarButtonItem = barButtonItem
         self.navigationController?.navigationBar.isTranslucent = false
 
+    }
+    
+    func loadSpinner()  {
+        
+        spinnerView.beginRefreshing()
+    }
+    
+    func hideSpinner() {
+        
+        spinnerView.endRefreshing()
     }
     
     
