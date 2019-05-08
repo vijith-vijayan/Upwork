@@ -17,8 +17,6 @@ class UserListViewController: BaseVC {
         return Webservice()
     }()
     
-    lazy var object: [Relations] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +30,7 @@ class UserListViewController: BaseVC {
     
     private func getDatas() {
         fetchRelations { (relations) in
-            self.object = relations
+            object = relations
             self.userListTabelView.reloadData()
         }
     }
@@ -57,14 +55,14 @@ extension UserListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        if object.count == 0 {
+        if relations.count == 0 {
             tableView.emptyMessage(title: "Loading your data",
                                    message: "Please wait a moment",
                                    emptyImage: UIImage(named: "high-five.png")!)
         } else {
             tableView.restoreTableView()
         }
-        return object.count
+        return relations.count
     }
     
     func tableView(_ tableView: UITableView,
@@ -73,17 +71,30 @@ extension UserListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userConnectionCell", for: indexPath) as? UserConnectionCell else {
             fatalError("Cell does not exist in storyboard")
         }
-        if object.count > 1{
-            let lastElement = object.count - 1
-            if indexPath.row == lastElement {
-                //call get api for next page
-                page += 1
-                getDatas()
-            }
-        }
-        let relation = object[indexPath.row]
+        let relation = relations[indexPath.row]
         cell.configureCell(relation: relation)
         return cell
     }
     
+}
+
+extension UserListViewController: UIScrollViewDelegate {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        // calculates where the user is in the y-axis
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            
+            if object!.count > 10{
+                page += 1
+                getDatas()
+                self.userListTabelView.reloadData()
+            }
+            
+        }
+    }
+
 }

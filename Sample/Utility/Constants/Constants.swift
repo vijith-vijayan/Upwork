@@ -13,6 +13,18 @@ import SwiftyJSON
 typealias responseJSON = JSON
 
 var count: Int = 1
+var relations = [Relations]()
+var object: [Relations]? {
+    
+    didSet {
+        for item in object! {
+            if !relations.contains(where: {$0.userId.elementsEqual(item.userId)}) {
+                relations.append(item)
+            }
+        }
+    }
+}
+
 var page: Int {
     get {
         return 0

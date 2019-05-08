@@ -13,8 +13,8 @@ import UIKit
 open class TTSegmentedControl: UIView {
     
     //Configure the options to for a custom design
-    @IBInspectable open var defaultTextFont: UIFont = UIFont.helveticaNeueMedium(13)
-    @IBInspectable open var selectedTextFont: UIFont = UIFont.helveticaNeueMedium(13)
+    @IBInspectable open var defaultTextFont: UIFont = UIFont.helveticaNeueLight(13)
+    @IBInspectable open var selectedTextFont: UIFont = UIFont.helveticaNeueLight(13)
     @IBInspectable open var defaultTextColor: UIColor = UIColor.black
     @IBInspectable open var selectedTextColor: UIColor = UIColor.white
     @IBInspectable open var useGradient: Bool = true
@@ -82,7 +82,7 @@ open class TTSegmentedControl: UIView {
     fileprivate var currentSelectedIndex = 0
     
     open var noItemSelected:Bool = false {
-        didSet {            
+        didSet {
             self.thumbView.isHidden = noItemSelected
             self.selectedLabelsView.isHidden = noItemSelected
         }
@@ -203,7 +203,6 @@ open class TTSegmentedControl: UIView {
 }
 
 //MARK: - UIConfiguration
-
 extension TTSegmentedControl {
     
     fileprivate func configureSelectedView() {
@@ -312,9 +311,9 @@ extension TTSegmentedControl {
         thumbContainerView.frame.origin.y = 0
         thumbContainerView.frame.size.height = containerView.frame.size.height
         
-        thumbView.frame.size.height = containerView.frame.size.height
-        thumbView.layer.cornerRadius = cornerRadius < 0 ? 0.4 * thumbView.frame.size.height : cornerRadius
-        thumbView.frame.origin.y = 0
+        thumbView.frame.size.height = containerView.frame.size.height - 4
+        thumbView.layer.cornerRadius = cornerRadius < 0 ? 0.5 * thumbView.frame.size.height : cornerRadius
+        thumbView.frame.origin.y = 2
         
         
         shadowLayer.frame = thumbView.bounds
@@ -347,7 +346,6 @@ extension TTSegmentedControl {
 }
 
 //MARK: - UIResponder Methods
-
 extension TTSegmentedControl {
     
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -450,7 +448,6 @@ extension TTSegmentedControl {
 }
 
 //MARK: -  Frames
-
 extension TTSegmentedControl {
     
     fileprivate func configureViewBounds() {
@@ -531,12 +528,12 @@ extension TTSegmentedControl {
             }
         } else {
             UIView.animate(withDuration: 0.3, animations: {
-               block()
+                block()
             }, completion: { (completed) in
                 completion(completed)
             })
         }
-
+        
     }
     
     fileprivate func selectedViewWidthForPoint(_ point: CGPoint)-> CGFloat {
@@ -577,7 +574,7 @@ extension TTSegmentedControl {
             let finalWidth = selectedViewWidthForPoint(targetLabel.center)
             let initialWidth = selectedViewWidthForPoint(label.center)
             
-            let diff = abs(initialWidth - finalWidth)
+            let diff = fabs(initialWidth - finalWidth)
             
             let minOriginX = min(label.center.x, targetLabel.center.x)
             let maxOriginX = max(label.center.x, targetLabel.center.x)
@@ -768,7 +765,6 @@ extension TTSegmentedControl {
 
 
 //MARK: - UIView Extension
-
 extension NSAttributedString {
     func stringSize() -> CGSize {
         return self.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, context: nil).size
@@ -776,8 +772,7 @@ extension NSAttributedString {
 }
 
 extension UIFont {
-    class func helveticaNeueMedium(_ size: CGFloat) -> UIFont {
+    class func helveticaNeueLight(_ size: CGFloat) -> UIFont {
         return UIFont(name: "HelveticaNeue-Medium", size: size)!
     }
 }
-

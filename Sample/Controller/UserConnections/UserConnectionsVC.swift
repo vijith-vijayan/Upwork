@@ -14,6 +14,7 @@ class UserConnectionsVC: BaseVC {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var userTabelView: UITableView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var textFieldHeight: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
@@ -30,7 +31,11 @@ class UserConnectionsVC: BaseVC {
         segmentControl.useShadow = true
         segmentControl.didSelectItemWith = { (index, title) -> () in
             if index == 0 {
+                self.textFieldHeight.constant = 30.0
                 self.showViewController(sID: "UserList")
+            } else if index == 1{
+                self.textFieldHeight.constant = 0.0
+                self.showViewController(sID: "mutalConnection")
             }
         }
     }

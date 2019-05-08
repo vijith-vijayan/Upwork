@@ -83,7 +83,9 @@
                         <outlet property="containerView" destination="gea-Gu-xn6" id="4jm-An-20x"/>
                         <outlet property="searchTextField" destination="tK6-XP-dcf" id="A2r-Lp-pT5"/>
                         <outlet property="segmentControl" destination="5Wg-cd-W5e" id="mMU-dS-Y28"/>
+                        <outlet property="textFieldHeight" destination="4A3-vq-Wog" id="czT-iB-ANr"/>
                         <segue destination="bvr-HH-koN" kind="show" id="V0k-WM-0SF"/>
+                        <segue destination="sFQ-zV-sbU" kind="show" id="NeL-bZ-kJv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,7 +104,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userConnectionCell" rowHeight="100" id="lqQ-sA-bDW" customClass="UserConnectionCell" customModule="Sample" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userConnectionCell" rowHeight="100" id="lqQ-sA-bDW" customClass="UserConnectionCell" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lqQ-sA-bDW" id="DMW-vI-4Eg">
@@ -192,6 +194,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mII-9S-XDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1679" y="-671"/>
+        </scene>
+        <!--Mutual ConnnectionsVC-->
+        <scene sceneID="Q4h-C9-yEj">
+            <objects>
+                <viewController storyboardIdentifier="mutalConnection" id="sFQ-zV-sbU" customClass="MutualConnnectionsVC" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="al9-Vb-2jy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Mutual Connections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5Y-6O-1bN">
+                                <rect key="frame" x="75.5" y="321.5" width="224.5" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G5Y-6O-1bN" firstAttribute="centerX" secondItem="al9-Vb-2jy" secondAttribute="centerX" id="jAc-XS-5kP"/>
+                            <constraint firstItem="G5Y-6O-1bN" firstAttribute="centerY" secondItem="al9-Vb-2jy" secondAttribute="centerY" id="k1x-Iw-5bc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="unA-rx-Eoh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MPY-94-AsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2358" y="-672"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NTY-rT-xNo">
