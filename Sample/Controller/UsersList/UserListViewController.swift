@@ -19,8 +19,6 @@ class UserListViewController: BaseVC {
     
     lazy var object: [Relations] = []
     
-    var finished: (() -> ())?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +26,7 @@ class UserListViewController: BaseVC {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        userListTabelView.rowHeight = 100
         getDatas()
     }
     
